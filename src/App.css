@@ -1,38 +1,126 @@
-.App {
+body {
+  background-color: rgb(15, 15, 15);
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+#waveform {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 32px;
+  margin-top: 5%;
+}
+
+#waveform:hover .audio-info {
+  display: block;
+  width: auto;
+}
+
+.audio-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-160%);
+  background-color: rgba(158, 204, 49, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ede2e2;
+  font-size: 12px;
+  display: none;
+  margin-bottom: -60px;
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.controls {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.controls button {
+  margin: 1px;
+  border: 1px solid #ccc !important;
+  border-radius: 4px;
+}
+
+.controls button:hover {
+  background-color: #979292;
+}
+
+.play-pause-btn {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.play-pause-btn button {
+  width: auto;
+  padding: 10px 16px;
+  border: 2px solid green;
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: green;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* card css */
+.app-container {
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 16px;
+  background-color: #eeecee;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(133, 16, 59);
+  transition: transform .1s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.card p {
+  margin-top: 10px;
+}
+
+
+.audio-player-container{
+  text-align: center;
+}
+
+.audio-player-container button{
+  color: #eeecee;
+  background-color: rgb(211, 43, 43);
+  border-radius: 4px;
+  padding: 10px;
+  border: none;
 }
